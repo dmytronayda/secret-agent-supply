@@ -57,18 +57,18 @@ header {
 h4 {
   font-size: 1rem;
   font-weight: bold;
-  font-family: Oswald;
 }
 
 .featured h4 {
   padding-bottom: .25rem;
+  font-family: Raleway;
 
 }
 
 h1 {
   font-size: 2rem;
   font-weight: bold;
-  font-family: Oswald;
+  font-family: Raleway;
 }
 
 .category-container {
@@ -81,6 +81,10 @@ h1 {
 
 .category-container .site-container {
   justify-content: space-between;
+}
+
+.mobile {
+  display: none;
 }
 
 .product-container {
@@ -101,14 +105,16 @@ h1 {
   justify-content: center;
   align-items: center;
   color: white;
-  width: 30%;
 }
 
 
 .product img {
   height: 9rem;
   padding: 2rem 0;
+  max-width: 70%;
 }
+
+
 
 
 .product span {
@@ -158,4 +164,72 @@ footer {
   background-color: black;
   color: white;
   text-align: left;
+}
+
+
+@media only screen and (max-width:1024px) {
+  .category {
+    display: none;
+  }
+  .site-container .mobile {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .product {
+    width: 47%;
+  }
+  .three {
+    display: none;
+  }
+}
+
+@media only screen and (max-width:470px) {
+  h4 {
+    font-size: 0.77rem;
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
+  .featured {
+    padding-left: 2rem;
+    padding-top: 1rem;
+    width: 100%;
+  }
+  .hero {
+    height: 15rem;
+  }
+  .category {
+    display: none;
+  }
+  .site-container .mobile {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .category-container {
+    display: flex;
+    justify-content: center;
+  }
+  .product {
+    width: 90%;
+
+  }
+  .three,
+  .two {
+    display: none;
+  }
+
+  .site-container .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+  }
+
+  .info {
+    padding-top: 0.5rem;
+  }
+
 }
